@@ -1,7 +1,7 @@
 package my.sample.plugin;
 
+import io.zhile.research.ja.netfilter.plugin.MyTransformer;
 import io.zhile.research.ja.netfilter.plugin.PluginEntry;
-import io.zhile.research.ja.netfilter.transformers.MyTransformer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,11 @@ public class MyPluginEntry implements PluginEntry {
     @Override
     public String getName() {
         return "SamplePlugin";
+    }
+
+    @Override
+    public String getAuthor() {
+        return "neo";
     }
 
     @Override
