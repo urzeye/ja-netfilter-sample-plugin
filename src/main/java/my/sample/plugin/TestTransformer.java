@@ -1,7 +1,7 @@
 package my.sample.plugin;
 
 
-import io.zhile.research.ja.netfilter.plugin.MyTransformer;
+import com.janetfilter.core.plugin.MyTransformer;
 
 public class TestTransformer implements MyTransformer {
     @Override
