@@ -1,6 +1,6 @@
 package my.sample.plugin;
 
-
+import com.janetfilter.core.commons.DebugInfo;
 import com.janetfilter.core.plugin.MyTransformer;
 
 public class TestTransformer implements MyTransformer {
@@ -11,7 +11,7 @@ public class TestTransformer implements MyTransformer {
 
     @Override
     public byte[] transform(String className, byte[] classBytes, int order) throws Exception {
-        System.out.println("Oh! It's you: " + className);
+        DebugInfo.debug("Oh! It's you: " + className);
 
         return classBytes;
     }
