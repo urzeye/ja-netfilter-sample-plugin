@@ -11,6 +11,7 @@ public class MyPluginEntry implements PluginEntry {
 
     public MyPluginEntry() {
         transformers.add(new TestTransformer());
+        transformers.add(new GlobalTransformer());
     }
 
     @Override
