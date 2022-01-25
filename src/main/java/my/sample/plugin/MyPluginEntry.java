@@ -12,6 +12,7 @@ public class MyPluginEntry implements PluginEntry {
     public MyPluginEntry() {
         transformers.add(new TestTransformer());
         transformers.add(new GlobalTransformer());
+        transformers.add(new AttachOnlyTransformer());
     }
 
     @Override
@@ -26,7 +27,7 @@ public class MyPluginEntry implements PluginEntry {
 
     @Override
     public String getVersion() {
-        return "v1.1.0";
+        return "v1.2.0";
     }
 
     @Override
