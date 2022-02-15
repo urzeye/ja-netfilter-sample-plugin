@@ -13,6 +13,7 @@ public class MyPluginEntry implements PluginEntry {
         transformers.add(new TestTransformer());
         transformers.add(new GlobalTransformer());
         transformers.add(new AttachOnlyTransformer());
+        transformers.add(new ManageTransformer());
     }
 
     @Override
