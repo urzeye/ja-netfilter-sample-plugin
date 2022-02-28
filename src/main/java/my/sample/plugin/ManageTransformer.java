@@ -3,6 +3,8 @@ package my.sample.plugin;
 import com.janetfilter.core.commons.DebugInfo;
 import com.janetfilter.core.plugin.MyTransformer;
 
+import java.security.ProtectionDomain;
+
 public class ManageTransformer implements MyTransformer {
     @Override
     public String getHookClassName() {
@@ -15,7 +17,7 @@ public class ManageTransformer implements MyTransformer {
     }
 
     @Override
-    public void before(String className, byte[] classBytes) throws Exception {
+    public void before(ClassLoader loader, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, String className, byte[] classBytes) throws Exception {
         DebugInfo.debug("before transform: " + className);
     }
 
